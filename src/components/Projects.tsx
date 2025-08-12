@@ -1,84 +1,152 @@
-import React, { useState } from 'react';
-import { ExternalLink, Github, X, ChevronLeft, ChevronRight } from 'lucide-react';
-import ProjectGallery from './ProjectGallery';
-import { useLanguage } from '../contexts/LanguageContext';
+import React, { useState } from "react";
+import {
+  ExternalLink,
+  Github,
+  X,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
+import ProjectGallery from "./ProjectGallery";
+import { useLanguage } from "../contexts/LanguageContext";
+
+import img1 from "../assets/images/appimotion.png";
+import img2 from "../assets/images/image.png";
+
+import img3 from "../assets/images/AuthScreen.png";
+import img4 from "../assets/images/EventView.png";
+import img5 from "../assets/images/FeedView.png";
+import img6 from "../assets/images/image2.png";
+
+import img7 from "../assets/images/SolarRiego.png";
 
 interface Project {
   id: string;
   title: string;
   description: string;
   technologies: string[];
-  category: 'backend' | 'mobile';
+  category: "backend" | "mobile";
   githubUrl?: string;
   demoUrl?: string;
   images: string[];
 }
 
 const Projects: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState<'all' | 'backend' | 'mobile'>('all');
+  const [activeCategory, setActiveCategory] = useState<
+    "all" | "backend" | "mobile"
+  >("all");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const { t } = useLanguage();
 
   const projects: Project[] = [
     {
-      id: 'appimotion',
-      title: 'Appimotion',
-      description: t.projects.appimotionDesc,
-      technologies: ['.NET', 'Flutter', 'Azure', 'Google Maps API', 'Riverpod', 'Docker'],
-      category: 'mobile',
-      githubUrl: 'https://github.com/hectorcastano/appimotion',
-      demoUrl: 'https://appimotion.demo.com',
+      id: "appimotion-backend",
+      title: "Appimotion+ Backend",
+      description: t.projects.appimotionBackendDesc,
+      technologies: [".NET", "REST API", "MongoDB", "Hangfire", "Azure DevOps"],
+      category: "backend",
+
       images: [
-        'https://images.pexels.com/photos/1109543/pexels-photo-1109543.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/163016/car-vehicle-drive-travel-163016.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/544966/pexels-photo-544966.jpeg?auto=compress&cs=tinysrgb&w=800'
-      ]
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Microsoft_.NET_logo.svg/800px-Microsoft_.NET_logo.svg.png",
+      ],
     },
     {
-      id: 'traffig',
-      title: 'Traffig',
+      id: "agro-monitoring-backend",
+      title: "Backend - Sistema de Monitoreo Agrícola",
+      description: t.projects.solarRiegoBackend,
+      technologies: [".NET", "REST API", "MongoDB", "IoT"],
+      category: "backend",
+      images: [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Microsoft_.NET_logo.svg/800px-Microsoft_.NET_logo.svg.png",
+      ],
+    },
+
+    {
+      id: "appimotion-mobile",
+      title: "Appimotion+ Mobile",
+      description: t.projects.appimotionMobileDesc,
+      technologies: ["Flutter", "Google Maps API", "Riverpod", "Docker"],
+      category: "mobile",
+      demoUrl:
+        "https://play.google.com/store/apps/details?id=com.inteia.appimotion_plus&hl=es_CO",
+      images: [img1, img2],
+    },
+
+    {
+      id: "traffig",
+      title: "Traffig",
       description: t.projects.traffigDesc,
-      technologies: ['.NET', 'Azure', 'SQL Server', 'Docker', 'Kubernetes', 'SignalR'],
-      category: 'backend',
-      githubUrl: 'https://github.com/hectorcastano/traffig',
+      technologies: [".NET", "Azure", "SQL Server", "Docker", "Kubernetes"],
+      category: "backend",
+      demoUrl:
+        "https://impactotic.co/resource-center/smartcityexpo/inteia-hub-sostenibilidad-e-interoperabilidad-tecnologica-para-los-territorios",
       images: [
-        'https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/1123972/pexels-photo-1123972.jpeg?auto=compress&cs=tinysrgb&w=800'
-      ]
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Microsoft_.NET_logo.svg/800px-Microsoft_.NET_logo.svg.png",
+      ],
     },
     {
-      id: 'mobile-pos',
-      title: 'Mobile POS System',
-      description: t.projects.mobilePosDesc,
-      technologies: ['Flutter', 'Dart', 'Firebase', 'SQLite', 'Riverpod', 'i18n'],
-      category: 'mobile',
-      githubUrl: 'https://github.com/hectorcastano/mobile-pos',
+      id: "sigmint",
+      title: "SIGMINT",
+      description: t.projects.sigming,
+      technologies: ["Flutter", "REST API", "Atomic Design", "Map Integration"],
+      category: "mobile",
+      // demoUrl o githubUrl si tienes
       images: [
-        'https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/4386346/pexels-photo-4386346.jpeg?auto=compress&cs=tinysrgb&w=800'
-      ]
+        "https://www.medellin.gov.co/es/wp-content/uploads/2022/03/Open-Graph-.png",
+      ],
     },
     {
-      id: 'inventory-api',
-      title: 'Inventory Management API',
-      description: t.projects.inventoryApiDesc,
-      technologies: ['.NET', 'PostgreSQL', 'JWT', 'Docker', 'Azure DevOps', 'SonarQube'],
-      category: 'backend',
-      githubUrl: 'https://github.com/hectorcastano/inventory-api',
-      images: [
-        'https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/6457579/pexels-photo-6457579.jpeg?auto=compress&cs=tinysrgb&w=800'
-      ]
-    }
+      id: "mobile-pos",
+      title: "SyncUpC",
+      description: t.projects.syncUpcMobile,
+      technologies: [
+        "Flutter",
+        "Dart",
+        "Firebase",
+        "MongoDB",
+        "Riverpod",
+        "Supabase",
+        "QR Generator",
+      ],
+      category: "mobile",
+      githubUrl: "https://github.com/DTZ-David/SyncUpC-App.git",
+      images: [img3, img4, img5],
+    },
+    {
+      id: "inventory-api",
+      title: "SyncUpC-Backend",
+      description: t.projects.syncUpCBackend,
+      technologies: [
+        ".NET",
+        "PostgreSQL",
+        "JWT",
+        "Docker",
+        "Azure DevOps",
+        "SonarQube",
+      ],
+      category: "backend",
+      githubUrl: "https://github.com/DTZ-David/SyncUpC-Backend.git",
+      images: [img6],
+    },
+    {
+      id: "agro-monitoring-mobile",
+      title: "SolarRiego",
+      description: t.projects.solarRiegoMobile,
+      technologies: ["Flutter", "REST API"],
+      category: "mobile",
+      images: [img7],
+    },
   ];
 
-  const filteredProjects = activeCategory === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === activeCategory);
+  const filteredProjects =
+    activeCategory === "all"
+      ? projects
+      : projects.filter((project) => project.category === activeCategory);
 
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+    <section
+      id="projects"
+      className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -91,17 +159,21 @@ const Projects: React.FC = () => {
           {/* Category Filter */}
           <div className="flex justify-center mb-12">
             <div className="bg-white dark:bg-gray-900 rounded-2xl p-2 shadow-lg">
-              {(['all', 'backend', 'mobile'] as const).map((category) => (
+              {(["all", "backend", "mobile"] as const).map((category) => (
                 <button
                   key={category}
                   onClick={() => setActiveCategory(category)}
                   className={`px-6 py-3 rounded-xl font-medium transition-all duration-200 capitalize ${
                     activeCategory === category
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
-                      : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800'
+                      ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg"
+                      : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800"
                   }`}
                 >
-                  {category === 'all' ? t.projects.allProjects : category === 'backend' ? t.projects.backendProjects : t.projects.mobileProjects}
+                  {category === "all"
+                    ? t.projects.allProjects
+                    : category === "backend"
+                    ? t.projects.backendProjects
+                    : t.projects.mobileProjects}
                 </button>
               ))}
             </div>
@@ -124,12 +196,16 @@ const Projects: React.FC = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   <div className="absolute top-4 left-4">
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                      project.category === 'backend' 
-                        ? 'bg-blue-500 text-white' 
-                        : 'bg-purple-500 text-white'
-                    }`}>
-                      {project.category === 'backend' ? t.common.backend : t.common.mobile}
+                    <span
+                      className={`px-3 py-1 rounded-full text-sm font-medium ${
+                        project.category === "backend"
+                          ? "bg-blue-500 text-white"
+                          : "bg-purple-500 text-white"
+                      }`}
+                    >
+                      {project.category === "backend"
+                        ? t.common.backend
+                        : t.common.mobile}
                     </span>
                   </div>
                   <button

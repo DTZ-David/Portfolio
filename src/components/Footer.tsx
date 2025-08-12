@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
             {/* Social Links */}
             <div className="flex justify-center space-x-6 mb-8">
               <a
-                href="https://github.com/hectorcastano"
+                href="https://github.com/DTZ-David"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-gray-800 hover:bg-gray-700 rounded-full transition-all duration-200 transform hover:scale-110 hover:shadow-lg"
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
                 <Github size={24} />
               </a>
               <a
-                href="https://linkedin.com/in/hectorcastano"
+                href="https://www.linkedin.com/in/hecto-david"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-gray-800 hover:bg-blue-600 rounded-full transition-all duration-200 transform hover:scale-110 hover:shadow-lg"

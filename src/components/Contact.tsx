@@ -97,7 +97,7 @@ const Contact: React.FC = () => {
                 </h4>
                 <div className="flex space-x-4">
                   <a
-                    href="https://github.com/hectorcastano"
+                    href="https://github.com/DTZ-David"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-gray-100 dark:bg-gray-800 rounded-xl hover:bg-gray-900 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 hover:text-white transition-all duration-200 transform hover:scale-110"
@@ -105,7 +105,7 @@ const Contact: React.FC = () => {
                     <Github size={24} />
                   </a>
                   <a
-                    href="https://linkedin.com/in/hectorcastano"
+                    href="https://www.linkedin.com/in/hecto-david"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-gray-100 dark:bg-gray-800 rounded-xl hover:bg-blue-600 text-gray-700 dark:text-gray-300 hover:text-white transition-all duration-200 transform hover:scale-110"

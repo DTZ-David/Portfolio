@@ -69,10 +69,15 @@ export interface Translation {
     backendProject: string;
     mobileProject: string;
     // Project descriptions
-    appimotionDesc: string;
+    appimotionMobileDesc: string;
+    appimotionBackendDesc: string;
+    solarRiegoBackend: string;
+    solarRiegoMobile : string;
     traffigDesc: string;
-    mobilePosDesc: string;
-    inventoryApiDesc: string;
+    syncUpCBackend : string;
+    syncUpcMobile :string;
+    sigming: string;
+   
   };
   
   // Contact Section
@@ -149,9 +154,9 @@ export const translations: Record<'es' | 'en', Translation> = {
       company: 'Inteia',
       period: 'Ene 2024 – Feb 2025',
       backendRole: 'Desarrollador Backend',
-      backendDesc: 'Construí APIs de microservicios robustas en .NET, desplegadas con Docker y Kubernetes (AKS). Integré servicios de Azure incluyendo Blob Storage y Key Vault, implementé pipelines de CI/CD con Azure DevOps, y aseguré la calidad del código con análisis de SonarQube.',
+    backendDesc: "Construyo APIs de microservicios escalables y seguras con .NET, contenerizadas con Docker y desplegadas en Kubernetes (AKS). Tengo experiencia integrando servicios de Azure como Blob Storage y Key Vault, implementando CI/CD con Azure DevOps y asegurando la calidad del código con SonarQube. Mi enfoque combina arquitectura hexagonal, principios SOLID y bases de datos SQL/NoSQL (SQL Server, PostgreSQL, MongoDB, CosmosDB) para crear soluciones limpias y mantenibles. Trabajo bajo Scrum, disfruto la colaboración y mantengo una actitud proactiva orientada a la entrega de valor.",
       mobileRole: 'Desarrollador Móvil',
-      mobileDesc: 'Diseñé e implementé interfaces de usuario modernas en Flutter siguiendo principios de Atomic Design. Gestioné el estado de la aplicación con Riverpod, integré autenticación segura con Azure Entra ID, e implementé seguimiento de rutas en tiempo real con Google Maps API.',
+      mobileDesc: 'Diseño y desarrollo aplicaciones móviles multiplataforma con Flutter, priorizando interfaces modernas y usabilidad, siguiendo principios de Atomic Design. Gestiono el estado de forma eficiente con Riverpod e integro funcionalidades avanzadas como autenticación segura con Azure Entra ID, geolocalización y trazado de rutas en tiempo real con Google Maps API. He trabajado en la implementación de notificaciones push, consumo de APIs RESTful y sincronización en tiempo real con backends en .NET y bases de datos SQL/NoSQL. Mi enfoque combina buenas prácticas de arquitectura, optimización de rendimiento y una experiencia de usuario fluida. Trabajo bajo metodologías ágiles y mantengo una actitud proactiva, orientada a entregar valor tangible en cada iteración. ',
       technologiesUsed: 'Tecnologías Utilizadas',
     },
     projects: {
@@ -168,10 +173,61 @@ export const translations: Record<'es' | 'en', Translation> = {
       technologiesUsed: 'Tecnologías Utilizadas',
       backendProject: 'Proyecto Backend',
       mobileProject: 'Proyecto Móvil',
-      appimotionDesc: 'Solución integral de gestión de movilidad y tráfico que combina aplicación móvil y servicios backend. Incluye seguimiento en tiempo real, optimización de rutas y análisis de tráfico.',
-      traffigDesc: 'Sistema de control de tráfico en tiempo real con capacidades avanzadas de análisis y monitoreo. Construido con arquitectura de microservicios para escalabilidad y rendimiento.',
-      mobilePosDesc: 'Aplicación de punto de venta multiplataforma construida con Flutter. Incluye gestión de inventario, procesamiento de pagos y sincronización offline.',
-      inventoryApiDesc: 'API RESTful para gestión de inventario con autenticación basada en roles, notificaciones en tiempo real y funciones completas de reportes.',
+      appimotionMobileDesc: `
+    Aplicación móvil para promover la movilidad sostenible, disponible en Google Play.
+    Tecnologías: Flutter, Google Maps API, Riverpod, Docker.
+
+    Aportes clave:
+    - Desarrollo de la interfaz y funcionalidades móviles.
+    - Integración con backend para gestión en tiempo real.
+    - Uso de Google Maps API para visualización de rutas.
+  `,
+      appimotionBackendDesc:  `
+    Plataforma backend que soporta la administración y trazabilidad del sistema Appimotion+.
+    Tecnologías: .NET, REST API, MongoDB, Hangfire, Azure DevOps.
+    Aportes clave:
+    - Desarrollo de múltiples endpoints para el módulo AdminService, incluyendo gestión de usuarios, rutas, eventos y configuraciones.
+    - Implementación de funcionalidades REST (CRUD, autenticación, validaciones, filtros).
+    - Integración de procesos en segundo plano con Hangfire para limpieza de registros, tareas automáticas y reportes.
+  `,
+      solarRiegoBackend: `
+    Backend desarrollado en .NET para la gestión de datos provenientes de sensores IoT instalados en invernaderos en Sotará, Cauca.
+    Se encarga de recibir, almacenar y procesar variables agroambientales como temperatura, humedad del suelo y nivel de agua,
+    facilitando la toma de decisiones para una agricultura sostenible.
+    Tecnologías: .NET, REST API, MongoDB, IoT.
+    Aportes clave:
+    - Implementación de endpoints seguros y escalables para la ingesta de datos de sensores.
+    - Diseño de modelo de datos para variables agroambientales con alta frecuencia de actualización.
+    - Integración con fuentes renovables de energía para operación sostenible.
+  `,
+      solarRiegoMobile:  `
+    Aplicación web desarrollada con Flutter que permite a los agricultores visualizar en tiempo real
+    las métricas de temperatura, humedad del suelo y nivel de agua capturadas por sensores instalados en invernaderos.
+    La plataforma facilita la gestión sostenible del recurso hídrico y energía renovable en la producción agrícola.
+    Tecnologías: Flutter, REST API.
+    Aportes clave:
+    - Diseño de interfaz amigable y accesible para usuarios rurales.
+    - Visualización dinámica de gráficos y alertas para una toma de decisiones eficiente.
+    - Conexión en tiempo real con backend mediante API REST.
+  `,
+      traffigDesc: "Sistema de control de tráfico en tiempo real con capacidades avanzadas de análisis y monitoreo. Construido con arquitectura de microservicios para escalabilidad y rendimiento.",
+      syncUpCBackend: `Desarrollé el backend para SyncUpC, una plataforma digital diseñada para la gestión de eventos académicos en la Universidad Popular del Cesar. Mi trabajo consistió en implementar una solución robusta y escalable utilizando .NET, aplicando principios de arquitectura hexagonal (Clean Architecture) y Domain-Driven Design (DDD).
+
+El sistema se diseñó con una estructura de microservicios, lo que facilitó una clara separación de responsabilidades y un desarrollo más ágil.
+`,
+      syncUpcMobile: `SyncUpC es una solución digital compuesta por una aplicación móvil y una plataforma web diseñada para optimizar la gestión de eventos académicos en entornos universitarios. El sistema permite:
+
+Consultar eventos institucionales en tiempo real.
+
+Inscribirse y recibir notificaciones personalizadas.
+
+Registrar la asistencia mediante escaneo de códigos QR, registrando horas de entrada/salida.`,
+      sigming: `
+    Aplicación móvil desarrollada para el equipo operativo de tránsito de la ciudad de Medellín, enfocada en la detección, reporte y seguimiento de fallas en señales viales, así como en la consulta de normativas asociadas a zonas específicas. La solución fue diseñada a medida para dispositivos de campo utilizados por personal técnico.
+    🔧 Aportes clave:
+    Desarrollo con Flutter, asegurando compatibilidad y rendimiento en dispositivos institucionales.
+    Implementación de Atomic Design para facilitar la mantenibilidad y escalabilidad de la interfaz.
+    `
     },
     contact: {
       title: 'Ponte en Contacto',
@@ -259,11 +315,15 @@ export const translations: Record<'es' | 'en', Translation> = {
       technologiesUsed: 'Technologies Used',
       backendProject: 'Backend Project',
       mobileProject: 'Mobile Project',
-      appimotionDesc: 'Comprehensive mobility and traffic management solution combining mobile app and backend services. Features real-time tracking, route optimization, and traffic analytics.',
-      traffigDesc: 'Real-time traffic control system with advanced analytics and monitoring capabilities. Built with microservices architecture for scalability and performance.',
-      mobilePosDesc: 'Cross-platform point-of-sale application built with Flutter. Features inventory management, payment processing, and offline synchronization.',
-      inventoryApiDesc: 'RESTful API for inventory management with role-based authentication, real-time notifications, and comprehensive reporting features.',
-    },
+     appimotionMobileDesc: "Mobile application to promote sustainable mobility, available on Google Play. Technologies: Flutter, Google Maps API, Riverpod, Docker. Key contributions: Development of the mobile interface and functionalities. Integration with backend for real-time management. Use of Google Maps API for route visualization.",
+  appimotionBackendDesc: "Backend platform that supports the administration and traceability of the Appimotion+ system. Technologies: .NET, REST API, MongoDB, Hangfire, Azure DevOps. Key contributions: Development of multiple endpoints for the AdminService module, including user, route, event, and configuration management. Implementation of REST functionalities (CRUD, authentication, validations, filters). Integration of background processes with Hangfire for record cleanup, automated tasks, and reports.",
+  solarRiegoBackend: "Backend developed in .NET for the management of data from IoT sensors installed in greenhouses in Sotará, Cauca. It is responsible for receiving, storing, and processing agro-environmental variables such as temperature, soil moisture, and water level, facilitating decision-making for sustainable agriculture. Technologies: .NET, REST API, MongoDB, IoT. Key contributions: Implementation of secure and scalable endpoints for sensor data ingestion. Design of a data model for agro-environmental variables with high update frequency. Integration with renewable energy sources for sustainable operation.",
+  solarRiegoMobile: "Web application developed with Flutter that allows farmers to visualize in real time the metrics of temperature, soil moisture, and water level captured by sensors installed in greenhouses. The platform facilitates the sustainable management of water resources and renewable energy in agricultural production. Technologies: Flutter, REST API. Key contributions: Design of a friendly and accessible interface for rural users. Dynamic visualization of charts and alerts for efficient decision-making. Real-time connection with the backend through REST API.",
+  traffigDesc: "Real-time traffic control system with advanced analysis and monitoring capabilities. Built with a microservices architecture for scalability and performance.",
+  syncUpCBackend: "I developed the backend for SyncUpC, a digital platform designed for the management of academic events at the Popular University of Cesar. My work consisted of implementing a robust and scalable solution using .NET, applying principles of hexagonal architecture (Clean Architecture) and Domain-Driven Design (DDD). The system was designed with a microservices structure, which facilitated a clear separation of responsibilities and more agile development.",
+  syncUpcMobile: "SyncUpC is a digital solution composed of a mobile application and a web platform designed to optimize the management of academic events in university environments. The system allows: Consulting institutional events in real time. Registering and receiving personalized notifications. Recording attendance by scanning QR codes, registering entry/exit times.",
+  sigming: "Mobile application developed for the operational transit team of the city of Medellín, focused on the detection, reporting, and tracking of failures in road signs, as well as the consultation of associated regulations for specific areas. The solution was custom-designed for field devices used by technical personnel. 🔧 Key contributions: Development with Flutter, ensuring compatibility and performance on institutional devices. Implementation of Atomic Design to facilitate interface maintainability and scalability."
+},
     contact: {
       title: 'Get In Touch',
       subtitle: 'Ready to start your next project or have a question? I\'d love to hear from you. Let\'s create something amazing together.',

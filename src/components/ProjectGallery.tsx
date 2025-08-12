@@ -58,10 +58,11 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project, onClose }) => 
           <div className="relative mb-6">
             <div className="aspect-video bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden">
               <img
-                src={project.images[currentImageIndex]}
-                alt={`${project.title} - Image ${currentImageIndex + 1}`}
-                className="w-full h-full object-cover"
-              />
+  src={project.images[currentImageIndex]}
+  alt={`${project.title} - Image ${currentImageIndex + 1}`}
+  className="w-full h-full object-contain"
+/>
+
             </div>
 
             {project.images.length > 1 && (
