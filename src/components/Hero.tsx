@@ -1,5 +1,5 @@
 import React from "react";
-import { Download, Github, Linkedin, MapPin } from "lucide-react";
+import { Github, Linkedin, MapPin } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 
 const Hero: React.FC = () => {
@@ -47,27 +47,6 @@ const Hero: React.FC = () => {
             <span>{t.hero.location}</span>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <a
-              href="/cvs/cv-hector-en.pdf"
-
-              download="cv-hector-en.pdf"
-              className="group flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-medium rounded-xl hover:from-blue-700 hover:to-blue-800 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
-            >
-              <Download size={20} className="mr-2 group-hover:animate-bounce" />
-              {t.hero.downloadCvEn}
-            </a>
-
-            <a
-            href="/cvs/cv-hector-es.pdf"
-
-              download="cv-hector-es.pdf"
-              className="group flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-700 text-white font-medium rounded-xl hover:from-purple-700 hover:to-purple-800 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
-            >
-              <Download size={20} className="mr-2 group-hover:animate-bounce" />
-              {t.hero.downloadCvEs}
-            </a>
-          </div>
 
           {/* Social Links */}
           <div className="flex justify-center space-x-6">
