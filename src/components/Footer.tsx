@@ -1,6 +1,6 @@
-import React from 'react';
-import { Github, Linkedin, Heart } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
+import React from "react";
+import { Github, Linkedin, Heart } from "lucide-react";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const Footer: React.FC = () => {
   const { t } = useLanguage();
@@ -15,9 +15,7 @@ const Footer: React.FC = () => {
             <h3 className="text-2xl font-bold mb-2">
               Héctor Alfonso Castaño David
             </h3>
-            <p className="text-gray-400 mb-8">
-              {t.hero.subtitle}
-            </p>
+            <p className="text-gray-400 mb-8">{t.hero.subtitle}</p>
 
             {/* Social Links */}
             <div className="flex justify-center space-x-6 mb-8">
@@ -44,7 +42,7 @@ const Footer: React.FC = () => {
             {/* Quick Contact */}
             <div className="mb-8 space-y-2 text-gray-400">
               <p>
-                <a 
+                <a
                   href="mailto:dtzdavid99@gmail.com"
                   className="hover:text-white transition-colors duration-200"
                 >
@@ -52,11 +50,11 @@ const Footer: React.FC = () => {
                 </a>
               </p>
               <p>
-                <a 
-                  href="tel:+573013865117"
+                <a
+                  href="mailto:hectorcastano.apps@gmail.com"
                   className="hover:text-white transition-colors duration-200"
                 >
-                  +57 301 386 5117
+                  hectorcastano.apps@gmail.com
                 </a>
               </p>
               <p>{t.hero.location}</p>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Github, Linkedin, Send } from 'lucide-react';
+import { Mail, MapPin, Github, Linkedin, Send } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Contact: React.FC = () => {
@@ -59,18 +59,11 @@ const Contact: React.FC = () => {
                     >
                       dtzdavid99@gmail.com
                     </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="p-3 bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl mr-4 flex-shrink-0">
-                    <Phone className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white">{t.contact.phone}</h4>
-                    
-                    
-                      +57 301 386 5117
+                    <a
+                      href="mailto:hectorcastano.apps@gmail.com"
+                      className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                    >
+                      hectorcastano.apps@gmail.com
                     </a>
                   </div>
                 </div>
