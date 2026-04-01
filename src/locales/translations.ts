@@ -104,8 +104,39 @@ export interface Translation {
   // Footer
   footer: {
     builtWith: string;
+    privacyPolicy: string;
   };
-  
+
+  // Privacy Policy
+  privacyPolicy: {
+    title: string;
+    lastUpdated: string;
+    intro: string;
+    dataCollectedTitle: string;
+    dataCollectedBody: string;
+    dataCollectedItems: string[];
+    dataUseTitle: string;
+    dataUseBody: string;
+    dataUseItems: string[];
+    thirdPartyTitle: string;
+    thirdPartyBody: string;
+    thirdPartyItems: string[];
+    dataRetentionTitle: string;
+    dataRetentionBody: string;
+    userRightsTitle: string;
+    userRightsBody: string;
+    userRightsItems: string[];
+    securityTitle: string;
+    securityBody: string;
+    childrenTitle: string;
+    childrenBody: string;
+    changesTitle: string;
+    changesBody: string;
+    contactTitle: string;
+    contactBody: string;
+    closeButton: string;
+  };
+
   // Common
   common: {
     backend: string;
@@ -250,6 +281,54 @@ Registrar la asistencia mediante escaneo de códigos QR, registrando horas de en
     },
     footer: {
       builtWith: 'Construido con',
+      privacyPolicy: 'Política de Privacidad',
+    },
+    privacyPolicy: {
+      title: 'Política de Privacidad',
+      lastUpdated: 'Última actualización',
+      intro: 'Esta Política de Privacidad describe cómo Héctor Alfonso Castaño David ("yo", "mi" o "el desarrollador") recopila, usa y protege la información de los usuarios de las aplicaciones móviles publicadas en Google Play Store. Al usar cualquiera de mis aplicaciones, aceptas los términos descritos en esta política.',
+      dataCollectedTitle: 'Información Recopilada',
+      dataCollectedBody: 'Las aplicaciones pueden recopilar los siguientes tipos de información según su funcionalidad:',
+      dataCollectedItems: [
+        'Información de uso: datos anónimos sobre cómo interactúas con la app (pantallas visitadas, funciones utilizadas).',
+        'Datos de ubicación: solo cuando la funcionalidad principal lo requiera y con tu consentimiento explícito.',
+        'Datos de cuenta: nombre de usuario y correo electrónico si la app requiere registro.',
+        'Datos técnicos: modelo de dispositivo, versión de SO y registros de errores para mejorar la estabilidad.',
+      ],
+      dataUseTitle: 'Uso de la Información',
+      dataUseBody: 'La información recopilada se utiliza exclusivamente para:',
+      dataUseItems: [
+        'Proveer y mantener el funcionamiento de la aplicación.',
+        'Detectar y corregir errores técnicos.',
+        'Mejorar la experiencia del usuario.',
+        'Cumplir con obligaciones legales cuando aplique.',
+      ],
+      thirdPartyTitle: 'Servicios de Terceros',
+      thirdPartyBody: 'Algunas aplicaciones integran servicios de terceros que pueden recopilar información de forma independiente:',
+      thirdPartyItems: [
+        'Google Play Services',
+        'Firebase (Analytics y Crashlytics)',
+        'Google Maps API (en apps con funcionalidad de mapas)',
+      ],
+      dataRetentionTitle: 'Retención de Datos',
+      dataRetentionBody: 'Los datos se conservan únicamente durante el tiempo necesario para cumplir los fines descritos. Puedes solicitar la eliminación de tus datos en cualquier momento contactándome por correo.',
+      userRightsTitle: 'Tus Derechos',
+      userRightsBody: 'Como usuario tienes derecho a:',
+      userRightsItems: [
+        'Acceder a los datos personales que se hayan recopilado.',
+        'Solicitar la corrección o eliminación de tus datos.',
+        'Retirar tu consentimiento en cualquier momento.',
+        'Presentar una queja ante la autoridad de protección de datos de tu país.',
+      ],
+      securityTitle: 'Seguridad',
+      securityBody: 'Implemento medidas técnicas razonables para proteger tu información contra acceso no autorizado, pérdida o alteración. Sin embargo, ningún sistema es completamente seguro y no puedo garantizar seguridad absoluta.',
+      childrenTitle: 'Menores de Edad',
+      childrenBody: 'Mis aplicaciones no están dirigidas a menores de 13 años y no recopilo intencionalmente información de ellos. Si detectas que un menor ha proporcionado datos personales, contáctame para eliminarlos.',
+      changesTitle: 'Cambios a esta Política',
+      changesBody: 'Esta política puede actualizarse periódicamente. Los cambios se publicarán en esta página con la fecha de actualización. Te recomiendo revisarla regularmente.',
+      contactTitle: 'Contacto',
+      contactBody: 'Si tienes preguntas sobre esta política o sobre el manejo de tus datos, puedes contactarme en:',
+      closeButton: 'Cerrar',
     },
     common: {
       backend: 'backend',
@@ -345,6 +424,54 @@ Registrar la asistencia mediante escaneo de códigos QR, registrando horas de en
     },
     footer: {
       builtWith: 'Built with',
+      privacyPolicy: 'Privacy Policy',
+    },
+    privacyPolicy: {
+      title: 'Privacy Policy',
+      lastUpdated: 'Last updated',
+      intro: 'This Privacy Policy describes how Héctor Alfonso Castaño David ("I", "me", or "the developer") collects, uses, and protects information from users of mobile applications published on the Google Play Store. By using any of my apps, you agree to the terms described in this policy.',
+      dataCollectedTitle: 'Information Collected',
+      dataCollectedBody: 'Applications may collect the following types of information depending on their functionality:',
+      dataCollectedItems: [
+        'Usage information: anonymous data about how you interact with the app (screens visited, features used).',
+        'Location data: only when core functionality requires it and with your explicit consent.',
+        'Account data: username and email address if the app requires registration.',
+        'Technical data: device model, OS version, and error logs to improve stability.',
+      ],
+      dataUseTitle: 'Use of Information',
+      dataUseBody: 'Collected information is used exclusively to:',
+      dataUseItems: [
+        'Provide and maintain app functionality.',
+        'Detect and fix technical errors.',
+        'Improve user experience.',
+        'Comply with legal obligations when applicable.',
+      ],
+      thirdPartyTitle: 'Third-Party Services',
+      thirdPartyBody: 'Some applications integrate third-party services that may independently collect information:',
+      thirdPartyItems: [
+        'Google Play Services',
+        'Firebase (Analytics and Crashlytics)',
+        'Google Maps API (in apps with map functionality)',
+      ],
+      dataRetentionTitle: 'Data Retention',
+      dataRetentionBody: 'Data is retained only for as long as necessary to fulfill the purposes described. You may request deletion of your data at any time by contacting me via email.',
+      userRightsTitle: 'Your Rights',
+      userRightsBody: 'As a user you have the right to:',
+      userRightsItems: [
+        'Access the personal data that has been collected.',
+        'Request correction or deletion of your data.',
+        'Withdraw your consent at any time.',
+        'File a complaint with the data protection authority in your country.',
+      ],
+      securityTitle: 'Security',
+      securityBody: 'I implement reasonable technical measures to protect your information against unauthorized access, loss, or alteration. However, no system is completely secure and I cannot guarantee absolute security.',
+      childrenTitle: 'Children',
+      childrenBody: 'My applications are not directed at children under 13 and I do not intentionally collect information from them. If you discover that a child has provided personal data, contact me to have it deleted.',
+      changesTitle: 'Changes to This Policy',
+      changesBody: 'This policy may be updated periodically. Changes will be posted on this page with the updated date. I recommend reviewing it regularly.',
+      contactTitle: 'Contact',
+      contactBody: 'If you have questions about this policy or how your data is handled, you can contact me at:',
+      closeButton: 'Close',
     },
     common: {
       backend: 'backend',
