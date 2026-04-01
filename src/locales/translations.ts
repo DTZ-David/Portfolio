@@ -135,6 +135,7 @@ export interface Translation {
     contactTitle: string;
     contactBody: string;
     closeButton: string;
+    backToPortfolio: string;
   };
 
   // Common
@@ -329,6 +330,7 @@ Registrar la asistencia mediante escaneo de códigos QR, registrando horas de en
       contactTitle: 'Contacto',
       contactBody: 'Si tienes preguntas sobre esta política o sobre el manejo de tus datos, puedes contactarme en:',
       closeButton: 'Cerrar',
+      backToPortfolio: 'Volver al Portfolio',
     },
     common: {
       backend: 'backend',
@@ -472,6 +474,7 @@ Registrar la asistencia mediante escaneo de códigos QR, registrando horas de en
       contactTitle: 'Contact',
       contactBody: 'If you have questions about this policy or how your data is handled, you can contact me at:',
       closeButton: 'Close',
+      backToPortfolio: 'Back to Portfolio',
     },
     common: {
       backend: 'backend',
